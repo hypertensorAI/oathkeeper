@@ -98,6 +98,7 @@ func (v *VerifierDefault) Verify(
 	}
 
 	parsedClaims := jwtx.ParseMapStringInterfaceClaims(claims)
+	fmt.Printf("parse Claims %+v validation context %+v", parsedClaims, r)
 	for _, audience := range r.Audiences {
 		if !stringslice.Has(parsedClaims.Audience, audience) {
 			return nil, errors.WithStack(herodot.ErrInternalServerError.WithReasonf("Token audience %v is not intended for target audience %s.", parsedClaims.Audience, audience))

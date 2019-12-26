@@ -42,7 +42,7 @@ type swaggerJSONWebKey struct {
 	// family used with the key, such as "RSA" or "EC". "kty" values should
 	// either be registered in the IANA "JSON Web Key Types" registry
 	// established by [JWA] or be a value that contains a Collision-
-	// Resistant Name.  The "kty" value is a case-sensitive string.
+	// Resistant CookieName.  The "kty" value is a case-sensitive string.
 	Kty string `json:"kty,omitempty"`
 
 	// The "kid" (key ID) parameter is used to match a specific key.  This
@@ -62,7 +62,7 @@ type swaggerJSONWebKey struct {
 	// use with the key.  The values used should either be registered in the
 	// IANA "JSON Web Signature and Encryption Algorithms" registry
 	// established by [JWA] or be a value that contains a Collision-
-	// Resistant Name.
+	// Resistant CookieName.
 	Alg string `json:"alg,omitempty"`
 
 	// The "x5c" (X.509 certificate chain) parameter contains a chain of one

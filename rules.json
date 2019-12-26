@@ -1,20 +1,15 @@
 [
   {
-    "id": "test-rule-2",
-    "upstream": {
-      "url": "https://test.kaistack.ai"
-    },
+    "id": "kaistack_auth_rule",
     "match": {
-      "url": "http://my-app/some-route/<.*>",
+      "url": "<.*>",
       "methods": [
-        "GET",
-        "POST",
-        "PUT"
+        "GET"
       ]
     },
     "authenticators": [
       {
-        "handler": "anonymous"
+        "handler": "jwt"
       }
     ],
     "authorizer": {

@@ -76,6 +76,9 @@ const (
 	// jwt
 	ViperKeyAuthenticatorJWTIsEnabled = "authenticators.jwt.enabled"
 
+	//cookie_jwt
+	ViperKeyAuthenticatorCookieJWTIsEnabled = "authenticators.cookie_jwt.enabled"
+
 	// oauth2_client_credentials
 	ViperKeyAuthenticatorOAuth2ClientCredentialsIsEnabled = "authenticators.oauth2_client_credentials.enabled"
 

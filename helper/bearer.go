@@ -36,21 +36,37 @@ type BearerTokenLocation struct {
 }
 
 func BearerTokenFromRequest(r *http.Request, tokenLocation *BearerTokenLocation) string {
+	ret := ""
 	if tokenLocation != nil {
 		if tokenLocation.Header != nil {
-			return r.Header.Get(*tokenLocation.Header)
-		} else if tokenLocation.QueryParameter != nil {
-			return r.FormValue(*tokenLocation.QueryParameter)
-		} else if tokenLocation.Cookie != nil {
+			ret = r.Header.Get(*tokenLocation.Header)
+			if strings.HasPrefix(strings.ToLower(ret), "bearer"){
+				ret = removeBearerPrefix(ret)
+			}
+		}
+
+		if ret == "" && tokenLocation.QueryParameter != nil {
+			ret = r.FormValue(*tokenLocation.QueryParameter)
+		}
+
+		if ret == "" && tokenLocation.Cookie != nil {
 			cookie, err := r.Cookie(*tokenLocation.Cookie)
 			if err != nil {
 				return ""
 			}
-			return cookie.Value
+			ret = cookie.Value
 		}
+
+		return ret
 	}
+
+
 	token := r.Header.Get(defaultAuthorizationHeader)
-	split := strings.SplitN(token, " ", 2)
+	return removeBearerPrefix(token)
+}
+
+func removeBearerPrefix(s string) string {
+	split := strings.SplitN(s, " ", 2)
 	if len(split) != 2 || !strings.EqualFold(split[0], "bearer") {
 		return ""
 	}

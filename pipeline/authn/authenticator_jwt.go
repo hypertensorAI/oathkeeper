@@ -2,6 +2,7 @@ package authn
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 
 	"github.com/dgrijalva/jwt-go"
@@ -86,7 +87,7 @@ func (a *AuthenticatorJWT) Authenticate(r *http.Request, config json.RawMessage,
 	if err != nil {
 		return nil, err
 	}
-
+    fmt.Printf("token %s", token)
 	pt, err := a.r.CredentialsVerifier().Verify(r.Context(), token, &credentials.ValidationContext{
 		Algorithms:    cf.AllowedAlgorithms,
 		KeyURLs:       jwksu,
