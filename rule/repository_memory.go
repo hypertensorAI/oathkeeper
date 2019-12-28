@@ -117,8 +117,6 @@ func (m *RepositoryMemory) Match(ctx context.Context, method string, u *url.URL)
 
 	if len(rules) == 0 {
 		return nil, errors.WithStack(helper.ErrMatchesNoRule)
-	} else if len(rules) != 1 {
-		return nil, errors.WithStack(helper.ErrMatchesMoreThanOneRule)
 	}
 
 	return &rules[0], nil

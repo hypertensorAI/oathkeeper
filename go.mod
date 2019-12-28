@@ -24,7 +24,13 @@ require (
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/go-swagger/go-swagger v0.19.0
 	github.com/go-swagger/scan-repo-boundary v0.0.0-20180623220736-973b3573c013 // indirect
-	github.com/gobuffalo/packr/v2 v2.0.0-rc.15
+	github.com/gobuffalo/buffalo-plugins v1.15.0 // indirect
+	github.com/gobuffalo/events v1.4.0 // indirect
+	github.com/gobuffalo/genny v0.6.0 // indirect
+	github.com/gobuffalo/mapi v1.2.0 // indirect
+	github.com/gobuffalo/meta v0.2.1 // indirect
+	github.com/gobuffalo/packr/v2 v2.7.1
+	github.com/gobuffalo/syncx v0.1.0 // indirect
 	github.com/golang/gddo v0.0.0-20190312205958-5a2505f3dbf0 // indirect
 	github.com/golang/mock v1.3.1
 	github.com/google/uuid v1.1.1
@@ -34,8 +40,10 @@ require (
 	github.com/imdario/mergo v0.3.7
 	github.com/jessevdk/go-flags v1.4.0 // indirect
 	github.com/julienschmidt/httprouter v1.2.0
+	github.com/karrick/godirwalk v1.13.4 // indirect
 	github.com/lib/pq v1.0.0
 	github.com/luna-duclos/instrumentedsql v0.0.0-20190316074304-ecad98b20aec // indirect
+	github.com/markbates/oncer v1.0.0 // indirect
 	github.com/mattn/goveralls v0.0.3
 	github.com/meatballhat/negroni-logrus v0.0.0-20170801195057-31067281800f
 	github.com/opencontainers/runc v1.0.0-rc5 // indirect
@@ -53,14 +61,14 @@ require (
 	github.com/pelletier/go-toml v1.6.0 // indirect
 	github.com/phayes/freeport v0.0.0-20180830031419-95f893ade6f2
 	github.com/pkg/errors v0.8.1
+	github.com/rogpeppe/go-internal v1.5.1 // indirect
 	github.com/rs/cors v1.6.0
 	github.com/sirupsen/logrus v1.4.2
 	github.com/spf13/cobra v0.0.5
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/spf13/viper v1.4.0 // indirect
 	github.com/sqs/goreturns v0.0.0-20181028201513-538ac6014518
 	github.com/square/go-jose v2.3.1+incompatible
-	github.com/stretchr/testify v1.3.0
+	github.com/stretchr/testify v1.4.0
 	github.com/subosito/gotenv v1.2.0 // indirect
 	github.com/tidwall/gjson v1.3.2
 	github.com/tidwall/sjson v1.0.4
@@ -68,10 +76,10 @@ require (
 	github.com/toqueteos/webbrowser v1.1.0 // indirect
 	github.com/urfave/negroni v1.0.0
 	github.com/xeipuuv/gojsonpointer v0.0.0-20190905194746-02993c407bfb // indirect
-	golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4
+	golang.org/x/crypto v0.0.0-20191219195013-becbf705a915
 	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45
-	golang.org/x/sys v0.0.0-20191026070338-33540a1f6037 // indirect
-	golang.org/x/tools v0.0.0-20191026034945-b2104f82a97d
+	golang.org/x/sys v0.0.0-20191224085550-c709ea063b76 // indirect
+	golang.org/x/tools v0.0.0-20191227053925-7b8e75db28f4
 	gopkg.in/square/go-jose.v2 v2.3.0
 )
 
