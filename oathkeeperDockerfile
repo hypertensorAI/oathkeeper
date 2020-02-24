@@ -1,0 +1,5 @@
+FROM gcr.io/mldemo-248002/base:latest
+RUN mkdir /opt/oathkeeper
+WORKDIR /opt/oathkeeper
+COPY .schemas /.schemas
+ADD bin/linux/oathkeeper /opt/oathkeeper
